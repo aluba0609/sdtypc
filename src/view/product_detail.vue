@@ -57,7 +57,7 @@
   </div>
 </template>
 
-<script name="energyMeter">
+<script name="product_detail">
 import { ref, onMounted ,defineComponent, reactive} from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { StarTwoTone } from '@ant-design/icons-vue';

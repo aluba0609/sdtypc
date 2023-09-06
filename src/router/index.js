@@ -42,9 +42,9 @@ const routes = [
         }
       },
       {
-        path: '/companyintroduction',
-        name: 'companyIntroduction',
-        component: () => import('@/view/CompanyIntroduction.vue'),
+        path: '/introduction',
+        name: 'introduction',
+        component: () => import('@/view/introduction.vue'),
         meta: {
           title: '公司介绍'
         }

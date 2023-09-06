@@ -36,7 +36,7 @@
         <a-menu-item key="solution">
           <span class="menuItemClass">典型案例</span>
         </a-menu-item>
-        <a-menu-item key="companyintroduction">
+        <a-menu-item key="introduction">
           <span class="menuItemClass">公司介绍</span>
         </a-menu-item>
         <a-menu-item key="contactus">

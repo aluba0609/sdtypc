@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script name="energyMeter" setup>
+<script name="productItem" setup>
 import { ref, onMounted ,defineComponent, reactive,defineProps,computed} from 'vue'
 import { useRouter } from 'vue-router'
 import {contentData} from "@/assets/js/allProductList.js";

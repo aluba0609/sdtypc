@@ -2,7 +2,7 @@
   <div>
     <div class="banner">关于我们</div>
     <div>
-      <div class="CompanyIntroduction-container">
+      <div class="introduction-container">
         <a-row>
           <a-col :span="12">
             <div>
@@ -36,7 +36,7 @@
   </div>
 </template>
 
-<script setup name="CompanyIntroduction">
+<script setup name="introduction">
 import { onMounted } from 'vue'
 onMounted(() => {
 
@@ -57,7 +57,7 @@ onMounted(() => {
   text-align: center;
 }
 
-.CompanyIntroduction-container {
+.introduction-container {
   padding: 100px 0;
   color: #808080;
   transition: all ease 0.5s;

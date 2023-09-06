@@ -8,7 +8,7 @@
         <img src="@/assets/img/logo.jpg" />
       </div>
       <a-menu v-model:selectedKeys="currentRouter" @click="routerPush" mode="horizontal" class="menuBoxClass" triggerSubMenuAction="hover">
-        <a-menu-item key="index">
+        <a-menu-item key="/">
           <span class="menuItemClass">首页</span>
         </a-menu-item>
         <a-sub-menu>

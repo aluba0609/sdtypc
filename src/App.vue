@@ -5,9 +5,15 @@ import Footer from '@/components/Footer.vue'
 
 <template>
   <Header></Header>
-  <router-view></router-view>
+  <div class="indexPage">
+    <router-view></router-view>
+  </div>
   <Footer></Footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+.indexPage{
+  padding-top: 70px;
+} 
+</style>
 

@@ -15,7 +15,7 @@ import A0547587 from "@/assets/img/origin/N-DN50-DN300/A0547587.png";
  * 超声波流量计L-DN50-DN300
  * 超声波能量计N-DN50-DN300
  */
-export let currentKey = ref('')
+export let currentKey = ref('product_one')
 export const productList = [
     {
         title: '供排水领域系列',

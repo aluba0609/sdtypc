@@ -19,9 +19,7 @@
 import { ref, onMounted ,defineComponent, reactive,defineProps,computed} from 'vue'
 import { useRouter } from 'vue-router'
 import {contentData} from "@/assets/js/allProductList.js";
-import DN15_DN40 from "@/assets/img/054A7680.png";
-import DN50_DN500 from "@/assets/img/054A7545.png";
-import DN_WIFI from "@/assets/img/054A7545.png";
+
 
 const {currentItem} = defineProps({
   currentItem:Object,

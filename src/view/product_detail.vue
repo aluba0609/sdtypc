@@ -5,7 +5,7 @@
       <div>
         <a-divider orientation="left">
           <a-breadcrumb separator=">"  style="line-height: 48px">
-            <a-breadcrumb-item>超声水表</a-breadcrumb-item>
+            <a-breadcrumb-item @click="routerPush">{{ productTitle }}</a-breadcrumb-item>
             <a-breadcrumb-item>{{ detailsData.title }}</a-breadcrumb-item>
           </a-breadcrumb>
         </a-divider>
@@ -53,17 +53,19 @@
 import { ref, onMounted ,defineAsyncComponent, reactive,watch,shallowRef} from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { StarTwoTone } from '@ant-design/icons-vue';
-import { productList,contentDetailData } from "@/assets/js/allProductList.js";
+import { productList,contentDetailData,currentKey } from "@/assets/js/allProductList.js";
 
 const router = useRouter()
 const route = useRoute()
 let detailsData = ref({})
+let productTitle = ref('')
 let currentCopmonent = shallowRef()
-const routerPush = (item) => { 
-  route.push(`/productDetail?id=${item.id}`)
+const routerPush = () => { 
+  router.push(`productList`)
 }
 const findData = () => { 
   const { id } = route.query
+  productTitle.value =  productList.filter(item => item.value === currentKey.value)?.at(0).title
   detailsData.value = contentDetailData.filter(item => item.id === id)?.at(0)
 }
 watch(() => detailsData.value, () => { 

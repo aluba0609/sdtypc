@@ -17,14 +17,6 @@
               <img :src="item"  style="height: 100%;width:100%;">
             </div>
           </a-carousel>
-          <!-- <div class="detailsImgList">
-            <div v-for="(item,index) in detailsData.imgList" :key="detailsData.id+'_'+index" @click="selectImg(item)">
-              <img :src="item" >
-            </div>
-          </div>
-          <div>
-            <img :src="currentImg"  style="height: 100%;width: 100%;">
-          </div> -->
         </div>
         <div style="height: 100%;width:60%;padding-left: 10px;">
           <div style="text-align: center;font-size: 24px;padding-top: 16px;">{{detailsData.title}}</div>
@@ -50,52 +42,35 @@
           <span style="font-weight: bold;font-size: 30px;line-height: 48px;color: #c7161d;">技术参数</span>
         </a-divider>
         <div>
-          <component :is="detailsData.component"></component>
+          <component :is="currentCopmonent"></component>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script name="product_detail">
-import { ref, onMounted ,defineComponent, reactive} from 'vue'
+<script setup name="product_detail">
+import { ref, onMounted ,defineAsyncComponent, reactive,watch,shallowRef} from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { StarTwoTone } from '@ant-design/icons-vue';
-import { contentDetailData } from "@/assets/js/allProductList.js";
+import { productList,contentDetailData } from "@/assets/js/allProductList.js";
 
-import DN15_DN40 from "./table/DN15_DN40.vue";
-import DN50_DN500 from "./table/DN50_DN500.vue";
-import DN_WIFI from "./table/DN_WIFI.vue";
-
-export default defineComponent({
-  components: {
-    DN15_DN40,
-    DN50_DN500,
-    DN_WIFI,
-    StarTwoTone
-  },
-  setup() {
-    const router = useRouter()
-    const route = useRoute()
-    let detailsData = ref({})
-    const currentImg = ref('')
-    const routerPush = (item) => { 
-      route.push(`/productDetail?id=${item.id}`)
-    }
-    const findData = () => { 
-      const { id } = route.query
-      detailsData.value = contentDetailData.filter(item => item.id === id)?.at(0)
-      currentImg.value = detailsData.value?.imgList.at(0)
-    }
-    onMounted(() => {
-      findData()
-    })
-    return {
-      routerPush,
-      detailsData,
-      currentImg,
-    }
-  },
+const router = useRouter()
+const route = useRoute()
+let detailsData = ref({})
+let currentCopmonent = shallowRef()
+const routerPush = (item) => { 
+  route.push(`/productDetail?id=${item.id}`)
+}
+const findData = () => { 
+  const { id } = route.query
+  detailsData.value = contentDetailData.filter(item => item.id === id)?.at(0)
+}
+watch(() => detailsData.value, () => { 
+  currentCopmonent.value = defineAsyncComponent(() => import(`./table/${detailsData.value.component}.vue`));
+})
+onMounted(() => {
+  findData()
 })
 </script>
 
@@ -135,5 +110,8 @@ export default defineComponent({
 }
 :deep(.ant-list-lg .ant-list-item) {
   padding: 5px 0;
+}
+:deep(.ant-breadcrumb ol){
+  flex-wrap: nowrap;
 }
 </style>

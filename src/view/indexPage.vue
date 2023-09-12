@@ -24,9 +24,6 @@ import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons-vue';
 import { onMounted, defineComponent } from 'vue'
 import banner1 from '@/assets/img/companyBg.png'
 import banner2 from '@/assets/img/water.jpg'
-import banner3 from '@/assets/img/054A7587.png'
-import banner4 from '@/assets/img/054A7609.png'
-import banner5 from '@/assets/img/054A7650.png'
 export default defineComponent({
   components: {
     LeftCircleOutlined,
@@ -41,21 +38,6 @@ export default defineComponent({
       },
       {
         img: banner2,
-        title: '',
-        content: ''
-      },
-      {
-        img: banner3,
-        title: '',
-        content: ''
-      },
-      {
-        img: banner4,
-        title: '',
-        content: ''
-      },
-      {
-        img: banner5,
         title: '',
         content: ''
       },

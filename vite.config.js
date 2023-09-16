@@ -4,19 +4,11 @@ import vue from '@vitejs/plugin-vue'
 import inject from '@rollup/plugin-inject'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: '/',
   plugins: [
     vue(),
-    inject({
-      BMap: 'BMap'
-    }),
     createHtmlPlugin({
-      /**
-       * 需要注入 index.html ejs 模版的数据
-       * https://blog.csdn.net/SilenceJude/article/details/128297371
-       */
       inject: {
         data: {
           VITE_APP_VERSION: new Date().toLocaleString()

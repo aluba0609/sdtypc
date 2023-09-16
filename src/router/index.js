@@ -55,6 +55,10 @@ const routes = [
     
     path: '/index',
     redirect: '/',
+  },
+  {
+    path: '/:pathMatch(.*)',
+    redirect: '/'
   }
 ]
 

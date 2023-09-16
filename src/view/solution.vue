@@ -9,9 +9,9 @@
                 <p class="textIndent">鹏诚智慧水务管理平台是以物联感知技术、大数据、智能控制、云计算、人工智能、数字孪生、AI算法、虚拟现实技术为核心，以监测仪表、通讯网络、数据库系统、数据中台、模型软件、前台展示、智慧运维等产品体系为支撑，以城市水资源、水生态、水环境和水安全提升和建造智能化为目标的智慧水务体系。</p>
                 <p class="textIndent">鹏诚智慧水务总体架构：采用1+2+3+N+X 架构设计，建立1个智慧大脑、2个体系、3个平台，N个基础数据及管理层级矩阵及X跨部门跨层级数据互联互通的系统架构。</p>
                 <p class="textIndent" style="text-align: center;font-size: 16px;">核心应用系统：</p>
-                <div style="display: flex;flex-wrap: wrap;gap: 10px;width: 100%;" >
+                <div style="display: flex;flex-wrap: wrap;gap: 10px;width: 100%;justify-content: space-evenly;" >
                     <template  v-for="item in systemInfo">
-                        <div style="width: calc(33% - 20px);height: ;">
+                        <div style="width: calc(33% - 20px);min-width: 450px;">
                             <a-card 
                                 :title="item.title"
                                 :bordered="true" 
@@ -26,7 +26,6 @@
                                 <p class="systemClass" v-for="el in item.list">{{el}}</p>
                 
                             </a-card>
-
                         </div>
                     </template>
                 </div>

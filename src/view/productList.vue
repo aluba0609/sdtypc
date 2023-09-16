@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner">产品服务</div>
+    <div class="banner"></div>
     <div style="margin: 65px;">
       <a-tabs v-model:activeKey="currentKey">
         <a-tab-pane v-for="(item,index) in productList" :key="item.value" :tab="item.title">

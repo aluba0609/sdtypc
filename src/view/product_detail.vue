@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner">产品服务</div>
+    <div class="banner"></div>
     <div class="productBox">
       <div>
         <a-divider orientation="left">
@@ -13,7 +13,7 @@
       <div class="centerDetail">
         <div  style="height: 100%;width:40%;display: flex;position: relative;">
           <a-carousel autoplay style="height: 100%;width:100%;">
-            <div v-for="(item,index) in detailsData.imgList" :key="detailsData.id+'_'+index" @click="selectImg(item)">
+            <div v-for="(item,index) in detailsData.imgList" :key="detailsData.id+'_'+index">
               <img :src="item"  style="height: 100%;width:100%;">
             </div>
           </a-carousel>

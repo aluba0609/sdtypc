@@ -1,6 +1,6 @@
 <template>
   <div >
-    <div class="banner">联系我们</div>
+    <div class="banner"></div>
     <div>
       <div class="container-fuild ContactUs-container">
         <div style="padding: 50px;">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner">关于我们</div>
+    <div class="banner"></div>
     <div>
       <div class="introduction-container">
         <a-row>

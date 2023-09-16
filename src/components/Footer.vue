@@ -9,7 +9,7 @@
     <p class="email_wx">
       <p>邮箱：{{ email }}</p>
     </p>
-    <p class="copy">Copyright &copy; 2023 - Now {{ company }}</p>
+    <p class="copy">Copyright &copy; 2023 - Now {{ company }} <a href="https://beian.miit.gov.cn">鲁ICP备2023028102号-1</a></p>
   </div>
 </template>
 

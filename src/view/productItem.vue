@@ -49,7 +49,7 @@ onMounted(() => {
 }
 .itemContent{
   height: 473px;
-  width: 450px;
+  width: 425px;
   background-color: #ebeef3;
 }
 .titleContent{

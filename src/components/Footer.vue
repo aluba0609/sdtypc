@@ -9,7 +9,13 @@
     <p class="email_wx">
       <p>邮箱：{{ email }}</p>
     </p>
-    <p class="copy">Copyright &copy; 2023 - Now {{ company }} <a href="https://beian.miit.gov.cn">鲁ICP备2023028102号-1</a></p>
+    <p class="copy">Copyright &copy; 2023 - Now {{ company }} 
+      <a href="https://beian.miit.gov.cn" style="margin-left: 5px;">鲁ICP备2023028102号-1</a>
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo" style="margin-left: 5px;">
+        <img style="display: inline-block;" alt="" src="../assets/img/7569191.png" />
+        鲁公网安备37011202002059号
+      </a>
+    </p>
   </div>
 </template>
 
